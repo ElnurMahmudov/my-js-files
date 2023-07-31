@@ -1,0 +1,78 @@
+
+<h2>Ad baza</h2>
+Ad daxil edin:<br>
+<input type="text" id="ad"><br><br>
+<button onclick="daxilet()" id="daxilet">Daxil et</button>
+<button onclick="update()" style="float:left;" id="update">Yenile </button>
+<button onclick="imtina()" id="imtina">Imrina</button>
+<br><br>
+
+<div id="ekran"></div>
+
+<script>
+
+	let adbaza = []
+
+	document.getElementById('update').style.display = 'none'
+	document.getElementById('imtina').style.display = 'none'
+
+	function show(){
+
+		if(adbaza.length>0){
+
+			let adbaza = JSON.parse(localStorage.getItem('adbaza'))
+			for(let i=0; i<adbaza.length; i++)
+			{
+				document.getElementById('ad').innerHTML += (i+1)+'. '+adbaza[i]+' <button id="'+i+'" onclick="sil(this.id)">Sil</button> <button id="'+i+'" onclick="edit(this.id)">Redakte et</button> <br>'
+			}
+			
+		}
+		else
+		{document.getElementById('adbaza').innerHTML = 'Bazada hec bir ad movcud deyil'}
+	}
+
+	
+		localStorage.setItem('adbaza',JSON.stringify(adbaza))
+
+
+	function daxilet(){
+
+		//Tekrar ad bazaya oturmayacaq: Bu ad artiq bazada movcuddur
+
+		let ad = document.getElementById('ad').value
+
+		if(ad!='')
+		{
+			adbaza.push(ad)
+			document.getElementById('ad').value = ''
+			show()
+		}
+		else
+		{alert('Ad daxil etmediniz')}
+	}
+
+	function sil(x){
+
+		//Melumati silerken Confirm cixsin: Melumati silmeye eminsinizmi
+		adbaza.splice(x,1)
+		show()
+
+	}
+
+	function edit(x){
+
+		document.getElementById('update').style.display = 'block'
+		document.getElementById('imtina').style.display = 'block'
+		document.getElementById('daxilet').style.display = 'none'
+		document.getElementById('ad').value = adbaza[ad]
+	}
+
+	/*
+
+	3. Redakteni basanda: Daxil et duymesi yoxa cixir, Yenile ve Imtina duymeleri emele gelir ve INPUT icerisinde redakte etmek istediyimiz ad yazilir
+	4. Butun emeliyyatlar FUNCTION daxilinde olsun
+
+
+
+	*/
+</script>

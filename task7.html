@@ -1,0 +1,35 @@
+<div id="ekran"></div>
+
+
+<script>
+	//Bosh massivin elan edilmesi
+	//let adlar = []
+	let adlar = ['Fuad','Samir','Aysel']
+
+	//Array-in sonuna element elave edir
+	adlar.push('Anar')
+	//Array-in evveline element elave edir
+	adlar.unshift('Tima')
+	//Splice index-e esasen element elave edir
+	adlar.splice(2,0,'Elnur')
+
+	//Array-in sonundan element silir
+	adlar.pop()
+	//Array-in evvelinden element silir
+	adlar.shift()
+	//Splice index-e esasen element elave edir
+	adlar.splice(2,1)
+
+
+
+	for(let i=0; i<adlar.length; i++){
+		document.getElementById('ekran').innerHTML += (i+1)+'. '+adlar[i]+' <button id="'+i+'" onclick="goster(this.id)">Goster</button><br>'
+	}
+
+
+	function goster(x){
+		document.getElementById('ekran').innerHTML = 'Secdiyiniz ad: '+adlar[x]
+	}
+
+	//goster()
+</script>

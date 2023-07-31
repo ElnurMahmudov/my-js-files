@@ -1,0 +1,121 @@
+<html>
+
+<div class="formstyle">
+<form name="calc">
+  <input id="ekran" type="text" name="ekran"> 
+  <br><br>
+  <input type="button" value="C" onclick="calc.ekran.value ='' "id="clear">
+  <input type="button" value="-/+" onclick="calc.ekran.value = ''-calc.ekran.value">
+  <input type="button" value="%" onclick="calc.ekran.value = '0.0'+calc.ekran.value">
+  <input type="button" value="/" onclick="calc.ekran.value += '/'">
+  <br>
+  <input type="button" id="yeddi" value="7" onclick="calc.ekran.value += 7">
+  <input type="button" id="sekkiz" value="8" onclick="calc.ekran.value += 8">
+  <input type="button" id="doqquz" value="9" onclick="calc.ekran.value += 9">
+  <input type="button" value="x" onclick="calc.ekran.value += '*'">
+  <br>
+  <input type="button" id="dord" value="4" onclick="calc.ekran.value += 4">
+  <input type="button" id="bes" value="5" onclick="calc.ekran.value += 5">
+  <input type="button" id="alti" value="6" onclick="calc.ekran.value += 6">
+  <input type="button" value="-" onclick="calc.ekran.value += '-'">
+  <br>
+  <input type="button" id="bir" value="1" onclick="calc.ekran.value += 1">
+  <input type="button" id="iki" value="2" onclick="calc.ekran.value += 2">
+  <input type="button" id="uc" value="3" onclick="calc.ekran.value += 3">
+  <input type="button" value="+" onclick="calc.ekran.value += '+'">
+  <br>
+  <input type="button" id="sifir" value="0" onclick="calc.ekran.value += 0">
+  <input type="button" value="," onclick="calc.ekran.value += '.'">
+  <input type="button" value="=" onclick="calc.ekran.value = eval(calc.ekran.value)">
+
+</form>
+</div>
+
+<style>
+body{
+	background-color: lightgreen;
+}
+
+
+#bir, #iki, #uc, #dord, #bes, #alti, #yeddi, #sekkiz, #doqquz
+{
+	background-color: silver;
+	color: black; 
+}
+
+.formstyle  
+{  
+	background-color: black;
+	width: 350px;  
+	height: 600px;  
+	margin: auto;  
+	border-bottom: 20px solid darkblue; 
+	border-right: 15px solid darkslateblue;
+	border-top: 3px solid darkslateblue; 
+	border-left: 3px solid darkslateblue;       
+	border-radius: 10px;  
+	padding: 20px;  
+}  
+
+#clear{  
+	width: 74px;  
+	height: 74;  
+	background-color: red;  
+	color: white;  
+	border-bottom: 5px solid white; 
+	border-right: 3px solid white;   
+    border-radius: 50px;  
+    padding: auto;  
+    margin: 5px;  
+    font-size: 25px;  
+}  
+
+input {  
+	width: 74px;  
+	height: 74;
+	background-color: darkblue;  
+	color: white;  
+	border-bottom: 5px solid white; 
+	border-right: 3px solid white;   
+    border-radius: 50px;  
+    padding: auto;  
+    margin: 5px;  
+    font-size: 25px;
+    font-family: serif;
+
+
+}  
+
+
+#ekran
+{  
+
+	width: 340px;  
+	height: 120;
+	border: 3px solid white;
+	background-color: darkgray;  
+	border-radius: 15px;  
+    padding: 20px;  
+    margin: 5; 
+    font-size: 55px;
+    font-style: ;
+    color: black; 
+}  
+
+#sifir
+{
+	width: 161px;  
+	height: 74;
+	background-color: silver; 
+	color: white;  
+	border-bottom: 5px solid white; 
+	border-right: 3px solid white;   
+    border-radius: 50px;  
+    padding: auto;  
+    margin: 5px;  
+    font-size: 25px;
+    font-family: serif; 
+    color: black;  
+}
+</style>
+</html>

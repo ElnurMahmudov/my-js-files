@@ -1,0 +1,37 @@
+<div id="sekundomer"></div>
+   
+	<br><br>
+	<button onclick="start()">Start</button>
+	<button onclick="reset()">Reset</button>
+	<button onclick="stop()">Stop</button>
+
+	<script>
+
+	let msan = 0
+	
+	 setInterval(function(){
+	 	msan++
+
+	 	document.getElementById('sekundomer').innerHTML = msan
+
+	 },10)
+
+	if(msan < 10){
+		document.getElementById('sekundomer').innerHTML = "0" + msan
+	}
+
+
+	let san = 0
+	
+	 setInterval(function(){
+	 	
+	 	san++
+
+	 	document.getElementById('sekundomer').innerHTML = san
+
+	 },1000)
+
+	if(san < 10){
+		document.getElementById('sekundomer').innerHTML = "0" + san
+	}
+	</script>

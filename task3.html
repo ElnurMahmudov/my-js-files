@@ -1,0 +1,19 @@
+<script>
+	
+	let d1 = new Date()
+	il = d1.getFullYear()
+	ay = d1.getMonth()+1
+	gun = d1.getDate()
+	saat = d1.getHours()
+	deqiqe = d1.getMinutes()
+	san = d1.getSeconds()
+	from1997 = d1.getTime()
+
+	let d2 = new Date('2023-10-01 00:00:00')
+	toBirthDay = d2.getTime()
+
+	seconds = Math.round((toBirthDay - from1997)/1000)
+	alert('Ad gunume '+seconds+' saniye qalib')
+
+
+</script>
